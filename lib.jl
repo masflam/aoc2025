@@ -1,6 +1,22 @@
 # utils to be included in daily solutions:
 # include("../lib.jl")
 
+function strlines(s:: AbstractString; trim:: Bool = true)
+	lines = split(s, '\n')
+	if trim
+		while !isempty(lines)
+			if isempty(lines[begin])
+				popfirst!(lines)
+			elseif isempty(lines[end])
+				pop!(lines)
+			else
+				break
+			end
+		end
+	end
+	lines
+end
+
 parseints(s:: AbstractString) = parse.(Int, split(s))
 parseints(strs:: AbstractVector{<:AbstractString}) = parse.(Int, strs)
 parseints(ints:: AbstractVector{<:Integer}) = Int.(ints)
