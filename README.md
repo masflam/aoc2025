@@ -39,4 +39,9 @@ Here we go again.
 		<td><code>00:03:59</code></td>
 		<td><code>00:16:09</code></td>
 	</tr>
+	<tr>
+		<td align="center">7</td>
+		<td><code>00:06:15</code></td>
+		<td><code>00:13:01</code></td>
+	</tr>
 </table>
